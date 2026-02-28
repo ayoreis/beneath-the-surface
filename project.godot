@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Beneath the Surface"
-run/main_scene="uid://b8ccrs1gbewk6"
+run/main_scene="uid://c8yemmx6efk5x"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

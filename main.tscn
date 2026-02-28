@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://b8ccrs1gbewk6"]
+[gd_scene format=3 uid="uid://c8yemmx6efk5x"]
+
+[ext_resource type="Script" uid="uid://d4mepl6f4c8wh" path="res://camscroll.gd" id="1_ig7tw"]
 
 [node name="Node2D" type="Node2D" unique_id=447501607]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1257232193]
+offset = Vector2(160, 90)
+script = ExtResource("1_ig7tw")
