@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if (event.button_index == 5):
-			print(Camera2D.offset)
+			position.y += 5
+			print(position.y)
