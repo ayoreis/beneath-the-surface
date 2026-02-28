@@ -1,5 +1,6 @@
 extends Camera2D
 
+var multiplier = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,5 +14,10 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if (event.button_index == 5):
-			position.y += 5
+			position.y += 5*multiplier
+			print(position.y)
+		if (event.button_index == 4):
+			if position.y <= -10:
+				pass
+			position.y -= 5*multiplier
 			print(position.y)
