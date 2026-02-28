@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://c8yemmx6efk5x"]
 
 [ext_resource type="Script" uid="uid://d4mepl6f4c8wh" path="res://camscroll.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c2ijsce1trami" path="res://timemap.gd" id="2_0xm2m"]
+
+[sub_resource type="TileSet" id="TileSet_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=447501607]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1257232193]
 offset = Vector2(160, 90)
 script = ExtResource("1_ig7tw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=443340137]
+tile_set = SubResource("TileSet_h2yge")
+script = ExtResource("2_0xm2m")
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=756876142]
 offset_left = 1.0
