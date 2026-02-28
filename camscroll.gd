@@ -1,6 +1,9 @@
 extends Camera2D
 
-var multiplier = 0.5
+var move_speed = 2.5
+var invert_scroll = false
+
+var SCROLL_DIRECTION = -1 if invert_scroll else 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,11 +16,10 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
+		var direction = 0
 		if (event.button_index == 5):
-			position.y += 5*multiplier
-			print(position.y)
-		if (event.button_index == 4):
-			if position.y <= -10:
-				pass
-			position.y -= 5*multiplier
-			print(position.y)
+			direction = 1
+		elif (event.button_index == 4):
+			direction = -1
+		var movement = move_speed * direction * SCROLL_DIRECTION
+		position.y = max(0, movement + position.y)
