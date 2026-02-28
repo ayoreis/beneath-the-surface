@@ -1,25 +1,55 @@
 extends Camera2D
 
-var move_speed = 2.5
+var move_speed = 5
 var invert_scroll = false
+
+var anchor = 100
+
+var surface = false
 
 var SCROLL_DIRECTION = -1 if invert_scroll else 1
 
-# Called when the node enters the scene tree for the first time.
+var forest_height = -160
+var jumpheight = 0
+
+var targetpos = Vector2.ZERO
+var larping = false
+var smooth_speed = 5
+
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if larping:
+		position = position.lerp(targetpos, smooth_speed * delta)
+		
+		if global_position.distance_to(targetpos) < 1.0:
+			global_position = targetpos
+			larping = false
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
+		if event.button_index != 5 and event.button_index != 4 or larping:
+			return	
+			
 		var direction = 0
 		if (event.button_index == 5):
 			direction = 1
 		elif (event.button_index == 4):
 			direction = -1
 		var movement = move_speed * direction * SCROLL_DIRECTION
-		position.y = max(0, movement + position.y)
+		
+		if !surface and position.y + movement <= jumpheight:
+			surface = true
+			larping = true
+			targetpos.y = forest_height
+			
+		elif surface and position.y + movement >= forest_height:
+			
+			larping = true
+			targetpos.y = jumpheight
+			surface = false
+		
+	
+		position.y = min(anchor, movement + position.y)
+		position.y = max(forest_height, movement+position.y)

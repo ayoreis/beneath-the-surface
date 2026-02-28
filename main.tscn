@@ -10,6 +10,5 @@ script = ExtResource("1_ig7tw")
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=756876142]
 offset_left = 1.0
-offset_top = 18.0
 offset_right = 271.0
-offset_bottom = 64.0
+offset_bottom = 46.0
