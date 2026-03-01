@@ -8,7 +8,7 @@ func _ready() -> void:
 func gettree() -> Vector2i:
 	var mouse_pos = get_global_mouse_position()
 	var map_pos = local_to_map(mouse_pos)
-	if get_cell_source_id(map_pos) == 0:
+	if get_cell_source_id(map_pos) == 1 or get_cell_source_id(map_pos) == 0:
 		return map_pos
 	return Vector2i(-1, -1)
 
