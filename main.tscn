@@ -50,7 +50,7 @@ position = Vector2(0, -160)
 offset = Vector2(160, 90)
 script = ExtResource("1_ig7tw")
 
-[node name="trees" type="TileMapLayer" parent="." unique_id=946761921]
+[node name="nodes" type="TileMapLayer" parent="." unique_id=946761921]
 z_index = 5
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAAEAAsAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAMAAAAAAAAAAAAOAA8AAAAAAAAAAAAGABEAAAAAAAAAAAANABUAAAAAAAAAAAACABQAAAAAAAAAAAA=")
