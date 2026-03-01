@@ -17,6 +17,7 @@ var larping = false
 var smooth_speed = 5
 
 func _ready() -> void:
+	print("aboubou")
 	pass # Replace with function body.
 
 func _process(delta: float) -> void:
