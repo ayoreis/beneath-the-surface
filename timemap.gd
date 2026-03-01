@@ -1,5 +1,7 @@
 extends TileMapLayer
 
+var growspeed = 0.1 # change for upgrades or sth 
+
 var startvec = Vector2(50, 50)
 var endvec = Vector2(100, 70)
 
@@ -22,7 +24,7 @@ func linethiny(startpos: Vector2i, endpos: Vector2i):
 		if e2 < dx:
 			err += dx
 			y += sy
-		await get_tree().create_timer(0.01).timeout
+		await get_tree().create_timer(growspeed).timeout
 
 func wobblypath(start: Vector2, end: Vector2, waypoints: int = 4):
 	var points = [start]
@@ -45,9 +47,11 @@ func wobblypath(start: Vector2, end: Vector2, waypoints: int = 4):
 	
 	for i in range(points.size() - 1):
 		await linethiny(Vector2i(points[i]), Vector2i(points[i + 1]))
+		if i==points.size() -2:
+			print("line connected i think")
 
 func _ready():
-	for i in range(8):
-		print("a")
-		wobblypath(Vector2(randi_range(0,180),randi_range(0,320)), Vector2(randi_range(0,180),randi_range(0,320)), randi_range(1,4))
+	#for i in range(8):
+	#	wobblypath(Vector2(randi_range(0,180),randi_range(0,320)), Vector2(randi_range(0,180),randi_range(0,320)), randi_range(1,4))
+	pass
 	
