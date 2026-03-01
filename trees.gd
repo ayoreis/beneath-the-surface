@@ -16,8 +16,9 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var tree = gettree()
 		if tree != Vector2i(-1, -1):
-			grow(16*(tree.x+1), event.position)
+			grow(16*(tree.x+1), event.position, tree)
 
-func grow(posx, mousepos) -> void:
+func grow(posx, mousepos, treepos) -> void:
+	var goalpos = Vector2i(posx-8+randi_range(-8,8),0)
 	print(get_parent().get_node("Hub").global_position)
-	get_parent().get_node("roots").wobblypath(Vector2i(get_parent().get_node("Hub").position), Vector2i(posx-8,0))
+	get_parent().get_node("roots").wobblypath(get_parent().get_node("Hub"), goalpos,Vector2i(get_parent().get_node("Hub").position), goalpos)
