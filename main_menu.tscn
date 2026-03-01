@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://barbs63pxnehk" path="res://resources/mushroots.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://cbc10ux85eu2s" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://dcdajpk8e46im" path="res://resources/nutrient-vial/play.png" id="2_7vrkn"]
-[ext_resource type="Texture2D" uid="uid://dxdrud2l28cp4" path="res://resources/nutrient-vial/play-interacted.png" id="4_glbon"]
-[ext_resource type="Texture2D" uid="uid://bkoetumqc61q1" path="res://resources/nutrient-vial/credits.png" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://dcdajpk8e46im" path="res://resources/play.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://dxdrud2l28cp4" path="res://resources/play-interacted.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://bkoetumqc61q1" path="res://resources/credits.png" id="4_jix8l"]
 
 [node name="Control" type="ColorRect" unique_id=404317464]
 anchors_preset = 15

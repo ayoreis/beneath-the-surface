@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxdrud2l28cp4"
-path="res://.godot/imported/play-interacted.png-ae302ffcb168503b8ae02a71943395c2.ctex"
+uid="uid://dcdajpk8e46im"
+path="res://.godot/imported/play.png-ab1fd1a48d8eca6358317079b0af400f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/nutrient-vial/play-interacted.png"
-dest_files=["res://.godot/imported/play-interacted.png-ae302ffcb168503b8ae02a71943395c2.ctex"]
+source_file="res://resources/play.png"
+dest_files=["res://.godot/imported/play.png-ab1fd1a48d8eca6358317079b0af400f.ctex"]
 
 [params]
 
