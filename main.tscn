@@ -1,28 +1,33 @@
 [gd_scene format=3 uid="uid://c8yemmx6efk5x"]
 
+[ext_resource type="Script" uid="uid://bln5qskniio58" path="res://scene.gd" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://d4mepl6f4c8wh" path="res://camscroll.gd" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://c2ijsce1trami" path="res://timemap.gd" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://tweo1aswkqg2" path="res://pixil-frame-0(2).png" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://c2ijsce1trami" path="res://tilemap.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dapd872lkagj1" path="res://root.png" id="2_h2yge"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("2_h2yge")
-texture_region_size = Vector2i(2, 2)
+texture_region_size = Vector2i(4, 4)
+0:1/0 = 0
 0:0/0 = 0
-2:0/0 = 0
 1:0/0 = 0
+1:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_1bvp3"]
-tile_size = Vector2i(2, 2)
-sources/1 = SubResource("TileSetAtlasSource_h2yge")
+[sub_resource type="TileSet" id="TileSet_h2yge"]
+tile_size = Vector2i(4, 4)
+custom_data_layer_0/name = "chance"
+custom_data_layer_0/type = 3
+sources/1 = SubResource("TileSetAtlasSource_1bvp3")
 
 [node name="Node2D" type="Node2D" unique_id=447501607]
+script = ExtResource("1_1bvp3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1257232193]
 offset = Vector2(160, 90)
 script = ExtResource("1_ig7tw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=443340137]
-tile_set = SubResource("TileSet_1bvp3")
+tile_set = SubResource("TileSet_h2yge")
 script = ExtResource("2_0xm2m")
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=756876142]
