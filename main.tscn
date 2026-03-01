@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c8yemmx6efk5x"]
 
-[ext_resource type="Script" uid="uid://bln5qskniio58" path="res://scene.gd" id="1_1bvp3"]
+[ext_resource type="Script" path="res://scene.gd" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://d4mepl6f4c8wh" path="res://camscroll.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://p3d642dq8d8f" path="res://timemap.gd" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://igkx4gvepd13" path="res://pixil-frame-0(4).png" id="3_1bvp3"]
@@ -57,7 +57,6 @@ tile_set = SubResource("TileSet_272bh")
 [node name="trees" type="TileMapLayer" parent="." unique_id=946761921]
 z_index = 5
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAAEAAsAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAMAAAAAAAAAAAAOAA8AAAAAAAAAAAAGABEAAAAAAAAAAAANABUAAAAAAAAAAAACABQAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_5vw27")
 script = ExtResource("6_272bh")
 
