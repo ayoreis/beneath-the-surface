@@ -3,7 +3,7 @@ extends TileMapLayer
 func _ready() -> void:
 	for i in range(0, 21, 2):
 		if randi_range(0, 1) == 1:
-			set_cell(Vector2i(i, -1), 0, Vector2i(0, 0))
+			set_cell(Vector2i(i, -1), 1, Vector2i(0, 0))
 
 func gettree() -> Vector2i:
 	var mouse_pos = get_global_mouse_position()
