@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dhoe2qrv11kpu"]
+
+[ext_resource type="Texture2D" uid="uid://barbs63pxnehk" path="res://resources/mushroots.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://cbc10ux85eu2s" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dcdajpk8e46im" path="res://resources/nutrient-vial/play.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://dxdrud2l28cp4" path="res://resources/nutrient-vial/play-interacted.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://bkoetumqc61q1" path="res://resources/nutrient-vial/credits.png" id="4_jix8l"]
+
+[node name="Control" type="ColorRect" unique_id=404317464]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+script = ExtResource("1_fu7sn")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=975489100]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1210578198]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=1419052833]
+layout_mode = 2
+texture = ExtResource("1_06t4h")
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=741442776]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_7vrkn")
+texture_hover = ExtResource("4_glbon")
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=1952319368]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_jix8l")
+stretch_mode = 2
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

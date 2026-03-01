@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://detbkpxk7cfxe"
-path="res://.godot/imported/fairytale-forest.png-17741b6d714968e293d7da4456fca55e.ctex"
+uid="uid://dcdajpk8e46im"
+path="res://.godot/imported/play.png-a7486dcc76d89f5602b5032e71608829.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fairytale-forest.png"
-dest_files=["res://.godot/imported/fairytale-forest.png-17741b6d714968e293d7da4456fca55e.ctex"]
+source_file="res://resources/nutrient-vial/play.png"
+dest_files=["res://.godot/imported/play.png-a7486dcc76d89f5602b5032e71608829.ctex"]
 
 [params]
 
