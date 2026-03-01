@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://q8abo6xyuxd6"]
 
+[ext_resource type="Texture2D" uid="uid://bmj2gtt0th6a" path="res://resources/dumpsterfire.png" id="1_n5ude"]
 [ext_resource type="PackedScene" uid="uid://c8yemmx6efk5x" path="res://main.tscn" id="1_nltto"]
 [ext_resource type="Texture2D" uid="uid://cmuibo7o45kic" path="res://resources/nutrient-vial/under.png" id="2_ibotj"]
+[ext_resource type="Texture2D" uid="uid://dr2tek3sacm7i" path="res://resources/metadown.png" id="2_y4yjw"]
 [ext_resource type="Texture2D" uid="uid://cs0kcfrd1jg8d" path="res://resources/nutrient-vial/over.png" id="3_n5ude"]
 [ext_resource type="Texture2D" uid="uid://uacutwomd2it" path="res://resources/nutrient-vial/progress.png" id="4_y4yjw"]
 
@@ -41,6 +43,16 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=928278835]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=450973037]
+layout_mode = 2
+texture = ExtResource("1_n5ude")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1719886579]
+layout_mode = 2
+texture = ExtResource("2_y4yjw")
+stretch_mode = 2
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=1213701401]
 layout_mode = 2
