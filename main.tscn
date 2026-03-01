@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c4amunupnxc22" path="res://resources/core.png" id="8_kek77"]
 [ext_resource type="Texture2D" uid="uid://cpsue3u44fdvu" path="res://resources/fire.png" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dd6unegr7arym" path="res://resources/nutrient.png" id="11_dg77c"]
-[ext_resource type="Script" uid="uid://dyf221o88ghxw" path="res://undergroundshit.gd" id="12_ycdy4"]
+[ext_resource type="Script" path="res://undergroundshit.gd" id="12_ycdy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272bh"]
 texture = ExtResource("5_7mycd")
@@ -160,6 +160,6 @@ autostart = true
 
 [node name="undergroundshit" type="TileMapLayer" parent="." unique_id=221839075]
 z_index = 2
-tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAAAQAAkAAAAAAAAAAAAIAAsAAAAAAAAAAAACAAkAAAAAAAAAAAASAAIAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAAAQAAkAAAAAAAAAAAAIAAsAAAAAAAAAAAASAAIAAAAAAAAAAAAEAAgAAAAAAAAAAAABAAwAAAAAAAAAAAAPAA8AAAAAAAAAAAADABIAAAAAAAAAAAAJABUAAAAAAAAAAAAQABQAAAAAAAAAAAALAAQAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_vivmo")
 script = ExtResource("12_ycdy4")
