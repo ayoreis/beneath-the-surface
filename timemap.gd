@@ -13,8 +13,11 @@ func linethiny(startpos: Vector2i, endpos: Vector2i):
 	var err = dx - dy
 	var x = startpos.x
 	var y = startpos.y
+	var cells = []
 	while true:
-		set_cell(Vector2i(x, y), 1, Vector2i(0, 0))
+		var pos = Vector2i(x, y)
+		cells.append(pos)
+		set_cell(pos, 1, Vector2i(0, 0))
 		if x == endpos.x and y == endpos.y:
 			break
 		var e2 = 2 * err
@@ -25,6 +28,7 @@ func linethiny(startpos: Vector2i, endpos: Vector2i):
 			err += dx
 			y += sy
 		await get_tree().create_timer(growspeed).timeout
+	return cells
 
 func wobblypath(start: Vector2, end: Vector2, waypoints: int = 4):
 	var points = [start]
@@ -45,10 +49,13 @@ func wobblypath(start: Vector2, end: Vector2, waypoints: int = 4):
 	
 	points.append(end)
 	
+	var all_cells = []
 	for i in range(points.size() - 1):
-		await linethiny(Vector2i(points[i]), Vector2i(points[i + 1]))
-		if i==points.size() -2:
-			print("line connected i think")
+		var cells = await linethiny(Vector2i(points[i]), Vector2i(points[i + 1]))
+		all_cells += cells
+	for pos in all_cells:
+		set_cell(pos, 1, Vector2i(2, 0))
+	print("line connected i think")
 
 func _ready():
 	#for i in range(8):
