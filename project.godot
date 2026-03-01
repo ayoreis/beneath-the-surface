@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="Beneath the Surface"
-run/main_scene="uid://q8abo6xyuxd6"
+run/main_scene="uid://dhoe2qrv11kpu"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://dhoe2qrv11kpu"
+main_scene="uid://dhoe2qrv11kpu"
 
 [display]
 
