@@ -1,7 +1,11 @@
 extends TileMapLayer
 
+@onready var parent = get_parent()
+
 func _ready() -> void:
-	for i in range(0, 21, 2):
+	if not parent.is_node_ready():
+		await parent.ready
+	for i in range(0, round(parent.CELL_WIDTH), 2):
 		if randi_range(0, 1) == 1:
 			set_cell(Vector2i(i, -1), 1, Vector2i(0, 0))
 
