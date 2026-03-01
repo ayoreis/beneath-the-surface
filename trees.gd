@@ -2,6 +2,12 @@ extends TileMapLayer
 
 @onready var parent = get_parent()
 
+<<<<<<< HEAD
+=======
+
+var nutrients = 0
+
+>>>>>>> refs/remotes/origin/main
 func _ready() -> void:
 	if not parent.is_node_ready():
 		await parent.ready
@@ -24,5 +30,8 @@ func _input(event: InputEvent) -> void:
 
 func grow(posx, mousepos, treepos) -> void:
 	var goalpos = Vector2i(posx-8+randi_range(-8,8),0)
+<<<<<<< HEAD
 	print(get_parent().get_node("Hub").global_position)
+=======
+>>>>>>> refs/remotes/origin/main
 	get_parent().get_node("roots").wobblypath(get_parent().get_node("Hub"), goalpos,Vector2i(get_parent().get_node("Hub").position), goalpos)
