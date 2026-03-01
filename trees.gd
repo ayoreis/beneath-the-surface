@@ -21,8 +21,8 @@ func _input(event: InputEvent) -> void:
 		var tree = gettree()
 		if tree != Vector2i(-1, -1):
 			var grid_size = parent.GRID_SIZE * 2
-			grow(Vector2(grid_size*(tree.x+1), grid_size*(tree.y+1)), event.position)
+			grow(Vector2(grid_size*(tree.x+1), grid_size*(tree.y+1)))
 
-func grow(pos, mousepos) -> void:
+func grow(pos) -> void:
 	print(get_parent().get_node("Hub").global_position)
 	get_parent().get_node("roots").wobblypath(Vector2i(get_parent().get_node("Hub").position), Vector2i(pos.x-parent.GRID_SIZE,pos.y-parent.GRID_SIZE))
