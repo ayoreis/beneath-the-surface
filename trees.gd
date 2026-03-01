@@ -2,6 +2,7 @@ extends TileMapLayer
 
 @onready var parent = get_parent()
 
+var nutrients = 0
 
 func _ready() -> void:
 	if not parent.is_node_ready():

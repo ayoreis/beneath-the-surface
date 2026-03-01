@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7d00bujhf4e6"
-path="res://.godot/imported/fantasy-24.png-ad969eafdd64a8125b9039a0529b84cf.ctex"
+uid="uid://barbs63pxnehk"
+path="res://.godot/imported/mushroots.png-1a2636a32bb82d8949e437ffff3f8def.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fantasy-24.png"
-dest_files=["res://.godot/imported/fantasy-24.png-ad969eafdd64a8125b9039a0529b84cf.ctex"]
+source_file="res://resources/mushroots.png"
+dest_files=["res://.godot/imported/mushroots.png-1a2636a32bb82d8949e437ffff3f8def.ctex"]
 
 [params]
 
