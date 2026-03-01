@@ -3,7 +3,7 @@ extends Camera2D
 var move_speed = 5
 var invert_scroll = false
 
-var anchor = 100
+var anchor = 300 #bottom shit
 
 var surface = false
 

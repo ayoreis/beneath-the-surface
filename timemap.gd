@@ -12,7 +12,7 @@ func linethiny(startpos: Vector2i, endpos: Vector2i):
 	var x = startpos.x
 	var y = startpos.y
 	while true:
-		set_cell(Vector2i(x, y), 0, Vector2i(0, 0))
+		set_cell(Vector2i(x, y), 1, Vector2i(0, 0))
 		if x == endpos.x and y == endpos.y:
 			break
 		var e2 = 2 * err
