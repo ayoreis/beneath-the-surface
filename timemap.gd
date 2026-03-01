@@ -60,7 +60,7 @@ func wobblypath(from,to, start: Vector2, end: Vector2, waypoints: int = 4):
 		set_cell(pos, 1, Vector2i(2, 0))
 		await get_tree().create_timer(0.01).timeout
 	var type = "tree"
-	connections.append([[points], from, to, type])
+	connections.append([[all_cells], from, to, type])
 	print(connections)
 	print("\n")
 	print("line connected i think")
