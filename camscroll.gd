@@ -1,6 +1,6 @@
 extends Camera2D
 
-var move_speed = 2	
+var move_speed = 2
 var invert_scroll = false
 
 var anchor = 180 #bottom shit

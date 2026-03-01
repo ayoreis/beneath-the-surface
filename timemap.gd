@@ -2,9 +2,6 @@ extends TileMapLayer
 
 var growspeed = 0.1 # change for upgrades or sth 
 
-var startvec = Vector2(50, 50)
-var endvec = Vector2(100, 70)
-
 func linethiny(startpos: Vector2i, endpos: Vector2i):
 	var dx = abs(endpos.x - startpos.x)
 	var dy = abs(endpos.y - startpos.y)
