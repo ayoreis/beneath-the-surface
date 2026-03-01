@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkoetumqc61q1"
-path="res://.godot/imported/credits.png-106fde5c5f5fcbc821a9a9c4b8ea0234.ctex"
+uid="uid://dr2tek3sacm7i"
+path="res://.godot/imported/metadown.png-bee167319d0b92018339caf3334eb794.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/nutrient-vial/credits.png"
-dest_files=["res://.godot/imported/credits.png-106fde5c5f5fcbc821a9a9c4b8ea0234.ctex"]
+source_file="res://resources/metadown.png"
+dest_files=["res://.godot/imported/metadown.png-bee167319d0b92018339caf3334eb794.ctex"]
 
 [params]
 
