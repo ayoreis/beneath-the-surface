@@ -1,12 +1,17 @@
 extends Sprite2D
 
-@export var nutrients:int = 0
+@export var nutrients = 0
+var connections
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	get_parent().get_node("Timer").timeout.connect(_on_timeout)
+	connections = get_parent().get_node("roots").connections
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_timeout():
+	for i in connections:
+		if i[3] == "tree":
+			nutrients += 0.1
+	
