@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bksedoyyquj0d"]
+
+[ext_resource type="Texture2D" uid="uid://d4grsq7hamiw4" path="res://resources/wincond.png" id="1_04cvy"]
+[ext_resource type="Texture2D" uid="uid://dp4j5jftx8v2" path="res://resources/playgain.png" id="2_0j0vi"]
+[ext_resource type="Script" uid="uid://cybmblekfpc80" path="res://texture_button.gd" id="2_c514m"]
+[ext_resource type="Texture2D" uid="uid://b2actjo5w0snw" path="res://resources/playagain-interacted.png" id="3_0j0vi"]
+
+[node name="wincond" type="ColorRect" unique_id=1966321850]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.16862746, 0.27058825, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1551916955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=334693513]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=808516986]
+layout_mode = 2
+texture = ExtResource("1_04cvy")
+
+[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=1788485896]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0j0vi")
+texture_hover = ExtResource("3_0j0vi")
+script = ExtResource("2_c514m")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton" to="CenterContainer/VBoxContainer/TextureButton" method="_on_pressed"]
