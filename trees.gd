@@ -2,6 +2,7 @@ extends TileMapLayer
 
 @onready var parent = get_parent()
 
+
 var nutrients = 0
 
 func _ready() -> void:
@@ -29,5 +30,13 @@ func _input(event: InputEvent) -> void:
 			grow(16*(tree.x+1), event.position, tree)
 
 func grow(posx, mousepos, treepos) -> void:
+	var the_hub = get_parent().get_node("Hub")
+	
 	var goalpos = Vector2i(posx-8+randi_range(-8,8),0)
-	get_parent().get_node("roots").wobblypath(get_parent().get_node("Hub"), goalpos,Vector2i(get_parent().get_node("Hub").position), goalpos)
+	var new_nutrients = the_hub.nutrients - the_hub.position.distance_to(goalpos) * .1
+	
+	if not (new_nutrients <= 0):
+		the_hub.nutrients = new_nutrients
+		get_parent().get_node("roots").wobblypath(the_hub, goalpos,Vector2i(the_hub.position), goalpos)
+	else:
+		print("YOU ARE BROKE :loll:")

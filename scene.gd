@@ -13,4 +13,4 @@ func _ready():
 	HEIGHT = size.y
 	CELL_WIDTH = WIDTH / GRID_SIZE
 	CELL_HEIGHT = HEIGHT / GRID_SIZE
-	print(WIDTH, " - ", HEIGHT)
+	#print(WIDTH, " - ", HEIGHT)

@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var nutrients = 0
+@export var nutrients = 15
 var connections
 
 func _ready() -> void:
