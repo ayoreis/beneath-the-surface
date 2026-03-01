@@ -14,6 +14,10 @@ func _ready() -> void:
 func gettree() -> Vector2i:
 	var mouse_pos = get_global_mouse_position()
 	var map_pos = local_to_map(mouse_pos)
+	var hub_pos = get_parent().get_node("Hub").position
+	var distance = mouse_pos.distance_squared_to(hub_pos)
+	if distance > 50 and not (hub_pos.y > mouse_pos.y):
+		return Vector2i(-1, -1)
 	if get_cell_source_id(map_pos) == 1 or get_cell_source_id(map_pos) == 0:
 		return map_pos
 	return Vector2i(-1, -1)
