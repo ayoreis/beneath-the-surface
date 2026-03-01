@@ -10,7 +10,7 @@ var surface = true
 var SCROLL_DIRECTION = -1 if invert_scroll else 1
 
 var forest_height = -160
-var jumpheight = 0
+var jumpheight = -18
 
 var targetpos = Vector2.ZERO
 var larping = false
